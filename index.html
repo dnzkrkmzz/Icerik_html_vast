@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640, initial-scale=1.0">
+  <title>VAST Reklamlı Otomatik Video</title>
+
+  <!-- Video.js CSS -->
+  <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+
+  <style>
+    .video-container {
+      width: 640px;
+      margin: 20px auto;
+    }
+    .content {
+      max-width: 640px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <video
+      id="content_video"
+      class="video-js vjs-default-skin"
+      controls
+      preload="auto"
+      width="640"
+      height="360"
+      muted
+      autoplay
+      playsinline
+    >
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="content">
+    <h1>Lorem Ipsum Başlık</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/></p>
+  </div>
+
+  <!-- Video.js + IMA SDK -->
+  <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+  <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-ads@6.9.0/dist/videojs-contrib-ads.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-ima@1.10.0/dist/videojs.ima.min.js"></script>
+
+  <script>
+    var player = videojs('content_video');
+
+    player.ima({
+      id: 'content_video',
+      adTagUrl: 'https://ad.doubleclick.net/ddm/pfadx/N1716742.2060311ADFORM/B33517046.420875720;sz=0x0;ord=' + Date.now()
+    });
+
+    // Reklam başlatmak için IMA SDK'yı tetikle
+    player.ready(function () {
+      player.ima.initializeAdDisplayContainer();
+      player.play();
+    });
+  </script>
+
+</body>
+</html>
