@@ -3,16 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=640, initial-scale=1.0">
-  <title>VAST Reklamlı Otomatik Video</title>
-
-  <!-- Video.js CSS -->
+  <title>AdMatic Video Sayfası</title>
   <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
-
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Üst Bar */
+    .header-bar {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .clock {
+      background-color: #a12823;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .clock i {
+      font-style: normal;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
     .video-container {
       width: 640px;
       margin: 20px auto;
     }
+
     .content {
       max-width: 640px;
       margin: 20px auto;
@@ -22,40 +70,49 @@
 </head>
 <body>
 
+  <div class="header-bar">
+    <div class="logo">
+      <img src="admlogo.png" alt="Logo">
+    </div>
+    <div class="clock">
+      🕒 <span id="clock">00:00:00</span>
+    </div>
+  </div>
+
+  <div class="nav-menu">
+    <a href="#">HOME</a>
+    <a href="#">WORLD</a>
+    <a href="#">BUSINESS</a>
+    <a href="#">POLITICS</a>
+    <a href="#">TECHS</a>
+    <a href="#">HEALTH</a>
+    <a href="#">TRAVEL</a>
+    <a href="#">MAGAZINE</a>
+    <a href="#">FOOD</a>
+    <a href="#">SPORT</a>
+  </div>
+
   <div class="video-container">
-    <video
-      id="content_video"
-      class="video-js vjs-default-skin"
-      controls
-      preload="auto"
-      width="640"
-      height="360"
-      muted
-      autoplay
-      playsinline
-    >
+    <video id="content_video" class="video-js vjs-default-skin" controls muted autoplay playsinline width="640" height="360">
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
     </video>
   </div>
 
   <div class="content">
     <h1>Lorem Ipsum Başlık</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna.<br/></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum, quam non bibendum fermentum, justo nisi porta ante, non luctus nunc libero at urna. <br/>
+    </p>
   </div>
 
   <!-- Video.js + IMA SDK -->
@@ -66,17 +123,26 @@
 
   <script>
     var player = videojs('content_video');
-
     player.ima({
       id: 'content_video',
       adTagUrl: 'https://ad.doubleclick.net/ddm/pfadx/N1716742.2060311ADFORM/B33517046.420875720;sz=0x0;ord=' + Date.now()
     });
 
-    // Reklam başlatmak için IMA SDK'yı tetikle
     player.ready(function () {
       player.ima.initializeAdDisplayContainer();
       player.play();
     });
+
+    // Saat
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
   </script>
 
 </body>
